@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AuthRoutingModule } from './auth-routing.module';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { MainComponent } from './pages/main/main.component';
+import { AuthRoutingModule  } from './auth-routing.module';
+import { LoginComponent }     from './pages/login/login.component';
+import { RegisterComponent }  from './pages/register/register.component';
+import { MainComponent }      from './pages/main/main.component';
+import {MatDatepickerModule}  from '@angular/material/datepicker';
+import {MatNativeDateModule}  from '@angular/material/core';
+//import {MatMomentDateModule}  from '@angular/material-moment-adapter';
+registerLocaleData('es');
+
+
+
 
 
 
@@ -15,7 +22,10 @@ import { MainComponent } from './pages/main/main.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule, 
+    MatNativeDateModule,
+    
   ]
 })
 export class AuthModule { }

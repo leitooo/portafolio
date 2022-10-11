@@ -16,7 +16,7 @@
         <span class="focus-input100"></span>
     </div>
 
-    <div class="wrap-input100 m-b-23">
+    <div class="wrap-input100 m-b-25">
         <span class="label-input100">Rut</span>
         <input class="input100"
                type="text" 
@@ -27,15 +27,83 @@
     </div>
 
     <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Apellido Paterno</span>
+        <input class="input100"
+               type="text" 
+               formControlName="aPaterno"
+               placeholder="Ingrese su Apellido Paterno">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Apellido Materno</span>
+        <input class="input100"
+               type="text" 
+               formControlName="aMaterno"
+               placeholder="Ingrese su Apellido Materno">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Género</span>
+        <input class="input100"
+               type="text" 
+               formControlName="genero"
+               placeholder="Ingrese su Género">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Dirección</span>
+        <input class="input100"
+               type="text" 
+               formControlName="direccion"
+               placeholder="Ingrese su Dirección">
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 m-b-23">
         <span class="label-input100">Celular</span>
         <input class="input100"
                input type="number" maxlength="9" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                formControlName="celular"
                placeholder="Ingrese su Número">
-               
         <span class="focus-input100"></span>
     </div>
 
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Teléfono</span>
+        <input class="input100"
+               input type="number" maxlength="9" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+               formControlName="telefono"
+               placeholder="Ingrese su Teléfono">
+        <span class="focus-input100"></span>
+    </div>
+
+
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Comuna</span>
+        <input class="input100"
+               type="text" 
+               formControlName="comuna"
+               placeholder="Ingrese su Comuna">
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Fecha Nacimiento:  </span>
+        <input matInput [matDatepicker]="mypicker" style="display:inline; width:300px;">
+        <mat-datepicker-toggle matSuffix [for]="mypicker"></mat-datepicker-toggle>
+        <mat-datepicker #mypicker></mat-datepicker>
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Nombre Usuario</span>
+        <input class="input100"
+               type="text" 
+               formControlName="nameUsuario"
+               placeholder="Ingrese nombre Usuario">
+        <span class="focus-input100"></span>
+    </div>
+    
     <div class="wrap-input100 m-b-23">
         <span class="label-input100">Email</span>
         <input class="input100"
@@ -44,7 +112,7 @@
                placeholder="Ingrese su email">
         <span class="focus-input100"></span>
     </div>
-
+    
     <div class="wrap-input100">
         <span class="label-input100">Password</span>
         <input class="input100"

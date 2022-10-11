@@ -4,15 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { ValidarTokenGuard } from './guards/validar-token.guard';
 
 const routes: Routes = [
-
-  {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
-  },
   {
     path: 'main-principal',
     loadChildren: () => import('./principal/principal.module').then( m => m.PrincipalModule )
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
+  },
+ 
   {
     path: 'dashboard',
     loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule ),
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'login'
+    redirectTo: 'main-principal'
   }
 
 ];

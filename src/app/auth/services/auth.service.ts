@@ -24,10 +24,10 @@ export class AuthService {
 
   constructor( private http: HttpClient ) { }
 
-  registro( name: string, rut: string, celular: number,email: string, password: string ) {
+  registro( name: string, rut: string, celular: number, telefono:number, email: string, password: string, aPaterno:string, aMaterno:string, genero:string, direccion:string, comuna:string, nameUsuario:string) {
 
     const url  = `${ this.baseUrl }/auth/new`;
-    const body = { email, password, name, rut, celular};
+    const body = { email, password, name, rut, celular , telefono, aPaterno, aMaterno, genero, direccion, comuna,nameUsuario};
 
     return this.http.post<AuthResponse>( url, body )
       .pipe(
@@ -78,7 +78,14 @@ export class AuthService {
               name: resp.name!,
               uid: resp.uid!,
               rut: resp.rut!,
+              aPaterno: resp.aPaterno!,
+              aMaterno: resp.aMaterno!,
+              genero: resp.genero!,
+              direccion: resp.direccion!,
               celular : resp.celular!,
+              telefono: resp.telefono!,
+              comuna: resp.comuna!,
+              nameUsuario: resp.nameUsuario!,
               email: resp.email!
             }
 

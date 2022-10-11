@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: MainPrincipalComponent,
     children: [
-      { path: '**', redirectTo: '' },
+      { path: '**', redirectTo: 'main-principal' },
     ]
   }
 

@@ -16,18 +16,18 @@ import { AuthService } from '../../services/auth.service';
 export class RegisterComponent {
 
   miFormulario: FormGroup = this.fb.group({
-    name:           ['Arielito', [ Validators.required ]],
-    rut:            ['10.574.234', [ Validators.required, Validators.maxLength(12)]],
+    name:           ['', [ Validators.required ]],
+    rut:            ['', [ Validators.required, Validators.maxLength(12)]],
     aPaterno:       ['', [ Validators.required ]],
     aMaterno:       ['', [ Validators.required ]],
     genero:         ['', [ Validators.required ]],
     direccion:      ['', [ Validators.required ]],
-    celular:        [981724615, [ Validators.required, Validators.maxLength(9) ]],
-    telefono:       [281724615, [ Validators.required, Validators.maxLength(9) ]],
+    celular:        [, [ Validators.required, Validators.maxLength(9) ]],
+    telefono:       [, [ Validators.required, Validators.maxLength(9) ]],
     comuna:         ['', [ Validators.required ]],
     nameUsuario:    ['', [ Validators.required ]],
     email:          ['', [ Validators.required, Validators.email ]],
-    password:       ['123456', [ Validators.required, Validators.minLength(6) ]],
+    password:       ['', [ Validators.required, Validators.minLength(6) ]],
   });
 
   constructor( private fb: FormBuilder,

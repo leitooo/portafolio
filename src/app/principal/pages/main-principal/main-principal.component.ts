@@ -11,6 +11,10 @@ export class MainPrincipalComponent  {
 
   constructor() { }
 
+  ingresar(proveedor: string){
+    console.log(proveedor);
+
+  }
 
 
 }

@@ -6,6 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+//import { AngularFirestoreModule } from '@angular/fire/firestore';
+//import { AngularFireStorageModule } from '@angular/fire/storage';
+//import { AngularFireAuthModule } from '@angular/fire/auth';
+//import { AngularFireModule } from '@angular/fire';
+//import { environment } from '../environments/environment';
 
 
 
@@ -18,7 +23,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

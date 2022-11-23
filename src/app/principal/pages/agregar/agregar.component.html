@@ -1,0 +1,92 @@
+<!--  
+<h1>
+    {{ ( reserva.id )? 'Editar' : 'Nuevo' }}
+    Nueva Reserva
+    <small>{{ reserva }}</small> 
+</h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+    <div fxFlex="50" fxLayout="column">
+        
+        <div fxLayout="row" 
+             fxLayout.xs="column" 
+             fxLayoutGap="20px">
+            <mat-form-field fxFlex="100" fxLayout.xs="column" >
+                <mat-label>Nombre</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="reserva.nombre"
+                       required>
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="100">
+                <mat-label>Servicio</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="reserva.servicio"
+                       required>
+            </mat-form-field>
+        </div>
+
+
+        <mat-form-field>
+            <mat-label>Servicio Extra</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="reserva.servicio_extra"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Pago</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="reserva.pago"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Destinos</mat-label>
+            <mat-select [(ngModel)]="reserva.destino"
+                        required>
+                <mat-option *ngFor="let publisher of destino"
+                            [value]="destino.id">
+                    {{ destino.desc }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <br>
+
+
+        <div fxLayout>
+            <button mat-raised-button 
+                    color="primary"
+                    (click)="guardar()">
+                <mat-icon>edit</mat-icon>
+                {{ ( reserva.id )? 'Actualizar' : 'Crear' }}
+            </button>
+        
+            <span class="spacer"></span>
+
+            <button *ngIf="reserva.id"
+                    mat-raised-button
+                    (click)="borrarHeroe()"
+                    color="warn">
+                <mat-icon>remove</mat-icon>
+                Borrar
+            </button>
+        </div>
+
+
+    </div>
+
+    <div fxFlex="50">
+       <img [src]="reserva | imagen">
+    </div>
+
+</div>
+-->

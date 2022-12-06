@@ -98,7 +98,7 @@ export class AgregarComponent implements OnInit {
 
   }
 
-  borrarHeroe() {
+  borrarrReserva() {
 
     const dialog = this.dialog.open( ConfirmarComponent, {
       width: '250px',
